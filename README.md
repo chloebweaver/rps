@@ -1,2 +1,2 @@
 # rps
-browser-based rock paper scissor for odin
+browser-based rock paper scissors game for odin
