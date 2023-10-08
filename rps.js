@@ -3,33 +3,25 @@
 
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
-    console.log(number);
-    if (number > 2) {
+    if (number < 1) {
         computerSelection = "rock";
-    } else if (2 > number > 1) {
+    } else if (number < 2) {
         computerSelection = "paper";
     } else {
         computerSelection = "scissors";
     }
-    console.log(computerSelection);
 }
-
-getComputerChoice();
 
 function getAutoSelect() {
     let number = Math.floor(Math.random() * 3);
-    console.log(number);
-    if (number > 2) {
+    if (number < 1) {
         autoSelect = "rock";
-    } else if (2 > number > 1) {
+    } else if (number < 2) {
         autoSelect = "paper";
     } else {
         autoSelect = "scissors";
     }
-    console.log(autoSelect);
 }
-
-getAutoSelect();
 
 // Write a function that allows a single round of rps.
 // It should take two parameters,
@@ -40,20 +32,22 @@ getAutoSelect();
 // AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
 
 function rps(playerSelection, computerSelection) {
-    playerSelection = prompt("Enter rock, paper, or scissors:");
-    if (playerSelection.toLowerCase() === computerSelection) {
+    getComputerChoice();
+    getAutoSelect();
+    playerSelection = prompt("Enter rock, paper, or scissors:", autoSelect);
+    if (playerSelection === computerSelection) {
         displayText = "You tied! Try again.";
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
         displayText = "You win! Rock beats scissors.";
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
         displayText = "You lose! Paper beats rock.";
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
         displayText = "You win! Paper beats rock.";
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
         displayText = "You lose! Scissors beats paper.";
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
         displayText = "You lose! Rock beats scissors.";
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
         displayText = "You win! Scissors beats paper.";
     } else {
         displayText = "Please try again."
