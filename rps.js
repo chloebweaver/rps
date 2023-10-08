@@ -5,11 +5,11 @@ function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
     console.log(number);
     if (number > 2) {
-        computerResult = "rock";
+        computerSelection = "rock";
     } else if (2 > number > 1) {
-        computerResult = "paper";
+        computerSelection = "paper";
     } else {
-        computerResult = "scissors";
+        computerSelection = "scissors";
     }
     console.log(computerResult);
 }
@@ -23,7 +23,25 @@ getComputerChoice();
 // "You lose! Paper beats rock."
 // The playerSelection should be case-insensitive.
 
+function rps(playerSelection, computerSelection) {
+    if (playerSelection.toLowerCase() === computerSelection) {
+        declareWinner = "You tied! Try again.";
+    } else if (playerSelection = "rock" && computerSelection = "scissors") {
+        declareWinner = "You win! Rock beats scissors.";
+    } else if (playerSelection = "rock" && computerSelection = "paper") {
+        declareWinner = "You lose! Paper beats rock.";
+    } else if (playerSelection = "paper" && computerSelection = "rock") {
+        declareWinner = "You win! Paper beats rock.";
+    } else if (playerSelection = "paper" && computerSelection = "scissors") {
+        declareWinner = "You lose! Scissors beats paper.";
+    } else if (playerSelection = "scissors" && computerSelection = "rock") {
+        declareWinner = "You lose! Rock beats scissors.";
+    } else {
+        declareWinner = "You win! Scissors beats paper.";
+    }
+}
 
+rps();
 
 // console.log the returned string to test the code.
 // Then remove the console.log portion of code.
