@@ -55,8 +55,6 @@ function rps(playerSelection, computerSelection) {
     window.alert(displayText);
 }
 
-rps();
-
 // Write a new function called game().
 // Either loop your previous function or
 // call it five times.
