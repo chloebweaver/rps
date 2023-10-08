@@ -37,6 +37,7 @@ getAutoSelect();
 // and return a string declaring a winner:
 // "You lose! Paper beats rock."
 // The playerSelection should be case-insensitive.
+// AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
 
 function rps(playerSelection, computerSelection) {
     playerSelection = prompt("Enter rock, paper, or scissors:");
@@ -61,11 +62,6 @@ function rps(playerSelection, computerSelection) {
 }
 
 rps();
-
-// console.log the returned string to test the code.
-// Then remove the console.log portion of code.
-
-
 
 // Write a new function called game().
 // Either loop your previous function or
