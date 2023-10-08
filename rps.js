@@ -1,7 +1,20 @@
 // Create a function called getComputerChoice
 // that will randomly return r, p, or s.
 
+function getComputerChoice() {
+    let number = Math.floor(Math.random() * 3);
+    console.log(number);
+    if (number > 2) {
+        computerResult = "rock";
+    } else if (2 > number > 1) {
+        computerResult = "paper";
+    } else {
+        computerResult = "scissors";
+    }
+    console.log(computerResult);
+}
 
+getComputerChoice();
 
 // Write a function that allows a single round of rps.
 // It should take two parameters,
