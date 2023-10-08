@@ -11,10 +11,25 @@ function getComputerChoice() {
     } else {
         computerSelection = "scissors";
     }
-    console.log(computerResult);
+    console.log(computerSelection);
 }
 
 getComputerChoice();
+
+function getAutoSelect() {
+    let number = Math.floor(Math.random() * 3);
+    console.log(number);
+    if (number > 2) {
+        autoSelect = "rock";
+    } else if (2 > number > 1) {
+        autoSelect = "paper";
+    } else {
+        autoSelect = "scissors";
+    }
+    console.log(autoSelect);
+}
+
+getAutoSelect();
 
 // Write a function that allows a single round of rps.
 // It should take two parameters,
@@ -24,21 +39,25 @@ getComputerChoice();
 // The playerSelection should be case-insensitive.
 
 function rps(playerSelection, computerSelection) {
+    playerSelection = prompt("Enter rock, paper, or scissors:");
     if (playerSelection.toLowerCase() === computerSelection) {
-        declareWinner = "You tied! Try again.";
-    } else if (playerSelection = "rock" && computerSelection = "scissors") {
-        declareWinner = "You win! Rock beats scissors.";
-    } else if (playerSelection = "rock" && computerSelection = "paper") {
-        declareWinner = "You lose! Paper beats rock.";
-    } else if (playerSelection = "paper" && computerSelection = "rock") {
-        declareWinner = "You win! Paper beats rock.";
-    } else if (playerSelection = "paper" && computerSelection = "scissors") {
-        declareWinner = "You lose! Scissors beats paper.";
-    } else if (playerSelection = "scissors" && computerSelection = "rock") {
-        declareWinner = "You lose! Rock beats scissors.";
+        displayText = "You tied! Try again.";
+    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+        displayText = "You win! Rock beats scissors.";
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
+        displayText = "You lose! Paper beats rock.";
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        displayText = "You win! Paper beats rock.";
+    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+        displayText = "You lose! Scissors beats paper.";
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+        displayText = "You lose! Rock beats scissors.";
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        displayText = "You win! Scissors beats paper.";
     } else {
-        declareWinner = "You win! Scissors beats paper.";
+        displayText = "Please try again."
     }
+    window.alert(displayText);
 }
 
 rps();
@@ -54,3 +73,13 @@ rps();
 // NOW you may console.log the winner declaration.
 // Use prompt() to get user input.
 // Feel free to create more helper functions for utility.
+
+function game() {
+    let n = 0;
+    while (n < 4) {
+        rps();
+        n++;
+    }
+}
+
+game();
