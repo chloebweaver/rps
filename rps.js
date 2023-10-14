@@ -1,6 +1,3 @@
-// Create a function called getComputerChoice
-// that will randomly return r, p, or s.
-
 function getComputerSelect() {
     let number = Math.floor(Math.random() * 3);
     if (number < 1) {
@@ -23,15 +20,12 @@ function getAutoSelect() {
     }
 }
 
-// Write a function that allows a single round of rps.
-// It should take two parameters,
-// playerSelection and computerSelection,
-// and return a string declaring a winner:
-// "You lose! Paper beats rock."
-// The playerSelection should be case-insensitive.
-// AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
-
 displayText = "Please enter rock, paper, or scissors:"
+
+// The following function compares the player's selection
+// to the computer's to determine the winner of a given
+// round of rock, paper, scissors.
+// AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
 
 function rps(playerSelection, computerSelection) {
     getComputerSelect();
@@ -56,12 +50,7 @@ function rps(playerSelection, computerSelection) {
     }
 }
 
-// Write a new function called game().
-// Either loop your previous function or
-// call it five times.
-// NOW you may console.log the winner declaration.
-// Use prompt() to get user input.
-// Feel free to create more helper functions for utility.
+// The game function then loops the rps function.
 
 function game() {
     let n = 0;
