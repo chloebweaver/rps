@@ -22,11 +22,9 @@ function getAutoSelect() {
 
 displayText = "Please enter rock, paper, or scissors:"
 
-// The following function compares the player's selection
-// to the computer's to determine the winner of a given
-// round of rock, paper, scissors.
+// Compare player's selection to computer's to ddetermine
+// the winner of a given round of rock, paper, scissors.
 // AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
-
 function rps(playerSelection, computerSelection) {
     getComputerSelect();
     getAutoSelect();
@@ -50,8 +48,7 @@ function rps(playerSelection, computerSelection) {
     }
 }
 
-// The game function then loops the rps function.
-
+// Loop the rps function
 function game() {
     let n = 0;
     while (n < 4) {
