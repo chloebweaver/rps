@@ -31,10 +31,12 @@ function getAutoSelect() {
 // The playerSelection should be case-insensitive.
 // AS OF NOW THE FUNCTION STICKS ON "PLEASE TRY AGAIN"
 
+displayText = "Please enter rock, paper, or scissors:"
+
 function rps(playerSelection, computerSelection) {
     getComputerChoice();
     getAutoSelect();
-    playerSelection = prompt("Enter rock, paper, or scissors:", autoSelect);
+    playerSelection = prompt(`${displayText}`, autoSelect);
     if (playerSelection === computerSelection) {
         displayText = "You tied! Try again.";
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
@@ -52,7 +54,6 @@ function rps(playerSelection, computerSelection) {
     } else {
         displayText = "Please try again."
     }
-    window.alert(displayText);
 }
 
 // Write a new function called game().
