@@ -36,7 +36,7 @@ displayText = "Please enter rock, paper, or scissors:"
 function rps(playerSelection, computerSelection) {
     getComputerChoice();
     getAutoSelect();
-    playerSelection = prompt(`${displayText}`, autoSelect);
+    playerSelection = prompt(`${displayText}`);
     if (playerSelection === computerSelection) {
         displayText = "You tied! Try again.";
     } else if (playerSelection == "rock" && computerSelection == "scissors") {
