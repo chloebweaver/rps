@@ -1,7 +1,7 @@
 // Create a function called getComputerChoice
 // that will randomly return r, p, or s.
 
-function getComputerChoice() {
+function getComputerSelect() {
     let number = Math.floor(Math.random() * 3);
     if (number < 1) {
         computerSelection = "rock";
@@ -34,7 +34,7 @@ function getAutoSelect() {
 displayText = "Please enter rock, paper, or scissors:"
 
 function rps(playerSelection, computerSelection) {
-    getComputerChoice();
+    getComputerSelect();
     getAutoSelect();
     playerSelection = prompt(`${displayText}`);
     if (playerSelection === computerSelection) {
