@@ -20,7 +20,7 @@ function getAutoSelect() {
     }
 }
 
-displayText = "Please enter rock, paper, or scissors:"
+displayText = "Please enter rock, paper, or scissors:";
 
 // Compare player's selection to computer's to ddetermine
 // the winner of a given round of rock, paper, scissors.
